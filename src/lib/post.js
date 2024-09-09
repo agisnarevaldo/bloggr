@@ -6,11 +6,11 @@ export async function getPost(slug) {
     const text = await readFile(`src/content/blog/${slug}.md`, "utf-8");
     const {
         content,
-        data: { title, date, author, image },
+        data: { title, description, date, author, image },
     } = matter(text);
 
     const body = marked(content);
-    return { title, date, author, image, body };
+    return { slug, title, description, date, author, image, body };
 }
 
 export async function getAllPost() {

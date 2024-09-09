@@ -1,5 +1,6 @@
 ---
 title: "Belajar ReactJS"
+description: "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies."
 image: "/image-1.jpg"
 date: "2021-08-04"
 author: "Jane Dane"

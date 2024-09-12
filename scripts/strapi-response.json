@@ -1,90 +1,59 @@
 {
   "data": [
     {
-      "id": 1,
+      "id": 3,
       "attributes": {
-        "title": "Belajar Strapi",
-        "description": "Belajar Headless CMS menggunakan Strapi",
-        "body": "Strapi is an open-source project (see **[LICENSE](https://github.com/strapi/strapi/blob/master/LICENSE)** file for more information). The core project, as well as the documentation and any related tool can be found in the [Strapi](https://github.com/strapi) GitHub organization.\n\nAs it goes hand in hand with the open-source ecosystem, Strapi is open to contributions. The Strapi team appreciates every contribution, be it a feature request, bug report, or pull request. The following GitHub repositories are open-source and contributions-friendly:\n- strapi/strapi: main repository of Strapi, which contains the core of the project. You can find the admin panel, core plugins, plugin providers, and the whole code that runs your Strapi application. Please read the [CONTRIBUTING.MD](https://github.com/strapi/strapi/blob/master/CONTRIBUTING.md) file to have more information about contributions to the main repository.\n- [strapi/documentation](https://github.com/strapi/documentation): contains the whole documentation of Strapi. Please read the contribution guide to have more information about contributions to the Strapi documentation.\nstrapi/design-system: is the design system that is used in the admin panel. It brings consistency between the different admin plugins.\n- strapi-community/awesome-strapi: contains everything the community built and all managed plugins. It is used as a central place to find and submit new packages such as plugins, middlewares, hooks, and general enhancements to the core of Strapi.",
-        "slug": "belajar-strapi",
-        "createdAt": "2024-09-11T15:58:51.696Z",
-        "updatedAt": "2024-09-11T15:59:07.248Z",
-        "publishedAt": "2024-09-11T15:59:07.241Z",
-        "locale": "en",
+        "slug": "learn-react-js",
+        "title": "Learn ReactJS",
+        "description": "What is ReactJS?",
+        "publishedAt": "2024-09-11T17:10:28.505Z",
+        "author": "Admin",
+        "body": "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React is used to build single-page applications, user interfaces, and mobile applications.",
         "image": {
           "data": {
             "id": 1,
             "attributes": {
-              "name": "sza.jpg",
-              "alternativeText": null,
-              "caption": null,
-              "width": 1200,
-              "height": 834,
-              "formats": {
-                "thumbnail": {
-                  "name": "thumbnail_sza.jpg",
-                  "hash": "thumbnail_sza_80fd1d9dd8",
-                  "ext": ".jpg",
-                  "mime": "image/jpeg",
-                  "path": null,
-                  "width": 225,
-                  "height": 156,
-                  "size": 9.71,
-                  "sizeInBytes": 9711,
-                  "url": "/uploads/thumbnail_sza_80fd1d9dd8.jpg"
-                },
-                "small": {
-                  "name": "small_sza.jpg",
-                  "hash": "small_sza_80fd1d9dd8",
-                  "ext": ".jpg",
-                  "mime": "image/jpeg",
-                  "path": null,
-                  "width": 500,
-                  "height": 348,
-                  "size": 49.44,
-                  "sizeInBytes": 49436,
-                  "url": "/uploads/small_sza_80fd1d9dd8.jpg"
-                },
-                "medium": {
-                  "name": "medium_sza.jpg",
-                  "hash": "medium_sza_80fd1d9dd8",
-                  "ext": ".jpg",
-                  "mime": "image/jpeg",
-                  "path": null,
-                  "width": 750,
-                  "height": 521,
-                  "size": 109.33,
-                  "sizeInBytes": 109330,
-                  "url": "/uploads/medium_sza_80fd1d9dd8.jpg"
-                },
-                "large": {
-                  "name": "large_sza.jpg",
-                  "hash": "large_sza_80fd1d9dd8",
-                  "ext": ".jpg",
-                  "mime": "image/jpeg",
-                  "path": null,
-                  "width": 1000,
-                  "height": 695,
-                  "size": 185.36,
-                  "sizeInBytes": 185355,
-                  "url": "/uploads/large_sza_80fd1d9dd8.jpg"
-                }
-              },
-              "hash": "sza_80fd1d9dd8",
-              "ext": ".jpg",
-              "mime": "image/jpeg",
-              "size": 262.61,
-              "url": "/uploads/sza_80fd1d9dd8.jpg",
-              "previewUrl": null,
-              "provider": "local",
-              "provider_metadata": null,
-              "createdAt": "2024-09-11T15:53:44.029Z",
-              "updatedAt": "2024-09-11T15:53:44.029Z"
+              "url": "/uploads/sza_80fd1d9dd8.jpg"
             }
           }
-        },
-        "localizations": {
-          "data": []
+        }
+      }
+    },
+    {
+      "id": 2,
+      "attributes": {
+        "slug": "belajar-next-js",
+        "title": "Belajar NextJS",
+        "description": "What is NextJS?",
+        "publishedAt": "2024-09-11T17:09:22.030Z",
+        "author": "Admin",
+        "body": "Next.js is a React framework for building full-stack web applications. You use React Components to build user interfaces, and Next.js for additional features and optimizations.",
+        "image": {
+          "data": {
+            "id": 2,
+            "attributes": {
+              "url": "/uploads/road_1bcec68ddd.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 1,
+      "attributes": {
+        "slug": "belajar-strapi",
+        "title": "Belajar Strapi",
+        "description": "Belajar Headless CMS menggunakan Strapi",
+        "publishedAt": "2024-09-11T15:59:07.241Z",
+        "author": "Agisna Revaldo",
+        "body": "Strapi is an open-source project (see **[LICENSE](https://github.com/strapi/strapi/blob/master/LICENSE)** file for more information). The core project, as well as the documentation and any related tool can be found in the [Strapi](https://github.com/strapi) GitHub organization.\n\nAs it goes hand in hand with the open-source ecosystem, Strapi is open to contributions. The Strapi team appreciates every contribution, be it a feature request, bug report, or pull request. The following GitHub repositories are open-source and contributions-friendly:\n- strapi/strapi: main repository of Strapi, which contains the core of the project. You can find the admin panel, core plugins, plugin providers, and the whole code that runs your Strapi application. Please read the [CONTRIBUTING.MD](https://github.com/strapi/strapi/blob/master/CONTRIBUTING.md) file to have more information about contributions to the main repository.\n- [strapi/documentation](https://github.com/strapi/documentation): contains the whole documentation of Strapi. Please read the contribution guide to have more information about contributions to the Strapi documentation.\nstrapi/design-system: is the design system that is used in the admin panel. It brings consistency between the different admin plugins.\n- strapi-community/awesome-strapi: contains everything the community built and all managed plugins. It is used as a central place to find and submit new packages such as plugins, middlewares, hooks, and general enhancements to the core of Strapi.",
+        "image": {
+          "data": {
+            "id": 1,
+            "attributes": {
+              "url": "/uploads/sza_80fd1d9dd8.jpg"
+            }
+          }
         }
       }
     }
@@ -92,9 +61,9 @@
   "meta": {
     "pagination": {
       "page": 1,
-      "pageSize": 25,
+      "pageSize": 6,
       "pageCount": 1,
-      "total": 1
+      "total": 3
     }
   }
 }

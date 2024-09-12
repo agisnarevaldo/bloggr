@@ -1,11 +1,16 @@
 import {writeFileSync} from "node:fs";
 import qs from "qs";
 
-const url = "http://localhost:1337/api/posts" + "?" + qs.stringify({
+const url = "http://localhost:1337/api/posts/" + "?" + qs.stringify({
+    filters: {
+        slug: {
+            $eq: "learn-react-js"
+        }
+    },
     fields: ["slug", "title", "description", "publishedAt", "author", "body"],
     populate: {image: {fields: ["url"]}},
     sort: ["publishedAt:desc"],
-    pagination: { pageSize: 6},
+    pagination: { pageSize: 1, withCount: false },
 }, {
     encodeValuesOnly: true
 });

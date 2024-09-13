@@ -1,7 +1,7 @@
 import {writeFileSync} from "node:fs";
 import qs from "qs";
 
-const url = "http://localhost:1337/api/posts/" + "?" + qs.stringify({
+const url = "https://appealing-actor-22426632b3.strapiapp.com/api/posts/" + "?" + qs.stringify({
     filters: {
         slug: {
             $eq: "learn-react-js"

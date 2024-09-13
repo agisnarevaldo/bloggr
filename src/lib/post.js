@@ -1,20 +1,10 @@
-import {readdir} from "node:fs/promises";
 import {marked} from "marked";
 import qs from "qs";
 
-const BACKEND_URL = "http://localhost:1337";
-
+const BACKEND_URL = "https://appealing-actor-22426632b3.strapiapp.com";
+        
 export async function getPost(slug) {
-    // const text = await readFile(`src/content/blog/${slug}.md`, "utf-8");
-    // const {
-    //     content,
-    //     data: { title, description, date, author, image },
-    // } = matter(text);
-    //
-    // const body = marked(content);
-    // return { slug, title, description, date, author, image, body };
-
-    const url = "http://localhost:1337/api/posts/" + "?" + qs.stringify({
+    const { data } = await fetchPosts({
         filters: {
             slug: {
                 $eq: slug
@@ -28,47 +18,48 @@ export async function getPost(slug) {
         encodeValuesOnly: true
     });
 
-    const response = await fetch(url);
-    const {data} = await response.json();
     const { attributes } = data[0];
     return {
-        slug: attributes.slug,
-        title: attributes.title,
-        description: attributes.description,
-        body: marked(attributes.body, {headerIds: false, mangle: false}),
-        author: attributes.author,
-        date: attributes.publishedAt.slice(0, "YYYY-MM-DD".length),
-        image: BACKEND_URL + attributes.image.data.attributes.url,
+        ...toPost({ attributes }),
+        body: marked(attributes.body, { headerIds: false, mangle: false }),
     }
 }
 
 export async function getAllPost() {
-    const url = `${BACKEND_URL}/api/posts?` +
-        qs.stringify({
+    const { data } = await fetchPosts({
         fields: ["slug", "title", "description", "publishedAt", "author", "body"],
         populate: {image: {fields: ["url"]}},
         sort: ["publishedAt:desc"],
-        pagination: { pageSize: 6},
-    }, {
-        encodeValuesOnly: true
+        pagination: { pageSize: 3},
     });
-    const response = await fetch(url);
-    const {data} = await response.json();
-    console.log(data);
+    return data.map(toPost);
+}
 
-    return data.map(({ attributes }) => ({
+export async function getSlugs() {
+    const { data } = await fetchPosts({
+        fields: ["slug"],
+        sort: ["publishedAt:desc"],
+        pagination: { pageSize: 100 },
+    });
+    return data.map(({ attributes }) => attributes.slug);
+}
+
+async function fetchPosts(parameters) {
+    const url = `${BACKEND_URL}/api/posts?` + qs.stringify(parameters, {encodeValuesOnly: true});
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status} | ${response.statusText}`);
+    }
+    return response.json();
+}
+
+function toPost({ attributes }) {
+    return {
         slug: attributes.slug,
         title: attributes.title,
         description: attributes.description,
         author: attributes.author,
         date: attributes.publishedAt.slice(0, "YYYY-MM-DD".length),
-        image: BACKEND_URL + attributes.image.data.attributes.url,
-    }));
-}
-
-export async function getSlugs() {
-    const files = await readdir("src/content/blog");
-    return files
-        .filter((file) => file.endsWith(".md"))
-        .map((file) => file.slice(0, -".md".length));
+        image: attributes.image.data.attributes.url,
+    };
 }

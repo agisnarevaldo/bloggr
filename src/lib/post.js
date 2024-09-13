@@ -2,7 +2,7 @@ import {marked} from "marked";
 import qs from "qs";
 
 const BACKEND_URL = "https://appealing-actor-22426632b3.strapiapp.com";
-        
+
 export async function getPost(slug) {
     const { data } = await fetchPosts({
         filters: {

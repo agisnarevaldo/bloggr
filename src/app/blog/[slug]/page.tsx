@@ -4,9 +4,13 @@ import {getPost, getSlugs} from "@/lib/post";
 import {Metadata} from "next";
 import ShareLinkButton from "@/components/shareLinkButton";
 
+type StaticParams = {
+    slug: string;
+}
+
 export async function generateStaticParams() {
     const slugs = await getSlugs();
-    return slugs.map((slug) => ({slug}));
+    return slugs.map((slug: StaticParams ) => ({ slug }));
 }
 
 type MetaDataParams = {

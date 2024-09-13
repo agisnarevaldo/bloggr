@@ -3,9 +3,8 @@ const nextConfig = {
     images: {
         remotePatterns: [
             {
-                protocol: 'http',
-                hostname: 'localhost',
-                pathname: '/uploads/**',
+                protocol: 'https',
+                hostname: 'appealing-actor-22426632b3.media.strapiapp.com',
             }
         ]
     }
